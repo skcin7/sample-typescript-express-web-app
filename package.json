@@ -1,0 +1,22 @@
+{
+  "name": "sample-typescript-express-web-app",
+  "version": "1.0.0-beta.0",
+  "description": "From https://codeburst.io/a-beginners-guide-to-setting-up-a-web-application-with-typescript-and-express-e1cf8319bc5c",
+  "main": "./src/index.js",
+  "scripts": {
+    "clean":"rimraf dist",
+    "build":"npm run clean && tsc && npm run build:copy-files",
+    "build:copy-files": "cp ./src/public/* ./dist/",
+    "start":"npm run build && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/typescript": "^2.0.0",
+    "express": "^4.18.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.3"
+  }
+}
